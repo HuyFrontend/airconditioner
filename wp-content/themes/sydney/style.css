@@ -3207,3 +3207,10 @@ Panels
 			margin-bottom: 0;
 		}
 	}
+/**
+** custom Css
+*/
+
+.header-wrap .site-title {
+	text-align: center;
+}

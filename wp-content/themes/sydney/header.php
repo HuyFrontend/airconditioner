@@ -36,7 +36,7 @@
 		<div class="header-wrap">
             <div class="container">
                 <div class="row">
-				<div class="col-md-4 col-sm-8 col-xs-12">
+				<div class="col-md-4 col-sm-8 col-xs-12 site-title">
 		        <?php if ( get_theme_mod('site_logo') ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 		        <?php else : ?>
