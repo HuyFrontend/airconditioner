@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div id="container">
+<div id="container search-container">
 		<?php if (have_posts()) : ?>
 		<div id="content">
         <h1 class="arc-post-title"><?php _e('Search Results', 'travel-lite'); ?></h1>
