@@ -2,24 +2,24 @@
 
 function travel_customize_register($wp_customize){
 
-    
+
     $wp_customize->add_section('travel_options', array(
         'priority' 		=> 10,
 		'capability'     => 'edit_theme_options',
 		'title'    		=> __('TRAVEL OPTIONS', 'travel-lite'),
         'description'   => '<div class="infohead">A Theme is an effort of many sleepless nights of Developers. You can contribute on this development translating this theme in your Language. You can send your translation/language file to us. For any kind of Theme Support, Please do not hesitate to <a target="_blank" href="'. esc_url('http://d5creation.com/contact').'">Contact Us</a> anytime<br><br>
-    
+
 We appreciate an <a target="_blank" href="'. esc_url('http://wordpress.org/support/view/theme-reviews/travel-lite').'">Honest Review</a> of this Theme if you Love our Work<br> <br>
 
-Need More Features and Options including Exciting Slide and 100+ Advanced Features? Try <a target="_blank" href="'. esc_url('http://d5creation.com/theme/travel/').'"><strong>Travel Extend</strong></a><br> <br> 
-        
-        
-You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo.d5creation.com/themes/?theme=Travel').'"><strong>Demo Here</strong></a> 
+Need More Features and Options including Exciting Slide and 100+ Advanced Features? Try <a target="_blank" href="'. esc_url('http://d5creation.com/theme/travel/').'"><strong>Travel Extend</strong></a><br> <br>
 
-        </div>		
+
+You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo.d5creation.com/themes/?theme=Travel').'"><strong>Demo Here</strong></a>
+
+        </div>
 		'
     ));
-	
+
 //  Responsive Layout
     $wp_customize->add_setting('travel[responsive]', array(
         'default'        	=> '1',
@@ -56,8 +56,8 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
 		'type' 		 => 'radio',
 		'choices' 	=> $fposttype
     ));
-	
-	
+
+
 	// Common Featured Box Image
     $wp_customize->add_setting('travel[ft-back]', array(
         'default'        	=> get_template_directory_uri() . '/images/thumb-back.jpg',
@@ -73,7 +73,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings'   	=> 'travel[ft-back]',
 		'description'  	=> __('Upload an image for the Common Background of Featured/ Thumbnail Image on every Post. 600px X 200px image is recommended','travel-lite')
     )));
-	
+
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
@@ -83,8 +83,8 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
 		'title'    		=> __('&nbsp;&nbsp;&nbsp;&nbsp; - Front Page Heading', 'travel-lite'),
         'description'   => ''
     ));
-	
-	
+
+
 // Front Page Heading
     $wp_customize->add_setting('travel[fpheading]', array(
         'default'        	=> __('Test Place, Sample Country','travel-lite'),
@@ -99,8 +99,8 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'section'    => 'travel_heading',
         'settings'   => 'travel[fpheading]'
     ));
-	
-	
+
+
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
  $wp_customize->add_section('travel_social', array(
@@ -124,7 +124,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'section'    => 'travel_social',
         'settings'   => 'travel[gplus-link]'
     ));
-	
+
 //  My Contact Link
     $wp_customize->add_setting('travel[con-link]', array(
         'default'        	=> '#',
@@ -140,7 +140,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings'   => 'travel[con-link]'
     ));
 
-  
+
  // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
  $wp_customize->add_section('travel_fbox', array(
@@ -150,10 +150,10 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'description'   => ''
     ));
 
- 	  
+
 // Front Page Fearured Images
-	foreach (range(1,3) as $fbsinumber) {
-	  
+	foreach (range(1,6) as $fbsinumber) {
+
 //  Featured Image
     $wp_customize->add_setting('travel[featured-image'. $fbsinumber .']', array(
         'default'           => get_template_directory_uri() . '/images/featured-image' . $fbsinumber . '.jpg',
@@ -168,7 +168,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings' 			=> 'travel[featured-image'. $fbsinumber .']',
 		'description'   	=> __('Upload an image for the Featured Box. 270px X 200px image is recommended','travel-lite')
     )));
-  
+
 // Featured Image Title
     $wp_customize->add_setting('travel[featured01-title' . $fbsinumber . ']', array(
         'default'        	=> __('Featured','travel-lite'),
@@ -184,7 +184,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'section'    => 'travel_fbox',
         'settings'   => 'travel[featured01-title' . $fbsinumber .']'
     ));
-	
+
     $wp_customize->add_setting('travel[featured02-title' . $fbsinumber . ']', array(
         'default'        	=> __('Image','travel-lite'),
         'capability'     	=> 'edit_theme_options',
@@ -215,7 +215,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings'   => 'travel[featured-description' . $fbsinumber .']',
 		'type' 		 => 'textarea'
     ));
-	
+
 	$wp_customize->add_setting('travel[featured-link' . $fbsinumber . ']', array(
         'default'        	=> '#',
         'capability'     	=> 'edit_theme_options',
@@ -232,8 +232,8 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
     ));
 
   }
-  
-  
+
+
   // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
  $wp_customize->add_section('travel_fc', array(
@@ -245,7 +245,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
 
 // Front Page Fearured Contents
 	foreach (range(1,3) as $fbsinumberd) {
-	  
+
 //  Featured Image
     $wp_customize->add_setting('travel[fcontent-image'. $fbsinumberd .']', array(
         'default'           => get_template_directory_uri() . '/images/fcontent-image' . $fbsinumberd . '.jpg',
@@ -260,7 +260,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings' 			=> 'travel[fcontent-image'. $fbsinumberd .']',
 		'description'   	=> __('Upload an image for the Featured Box. 270px X 200px image is recommended','travel-lite')
     )));
-  
+
 // Featured Image Title
     $wp_customize->add_setting('travel[fcontent01-title' . $fbsinumberd . ']', array(
         'default'        	=> __('Featured','travel-lite'),
@@ -276,7 +276,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'section'    => 'travel_fc',
         'settings'   => 'travel[fcontent01-title' . $fbsinumberd .']'
     ));
-	
+
     $wp_customize->add_setting('travel[fcontent02-title' . $fbsinumberd . ']', array(
         'default'        	=> __('Content','travel-lite'),
         'capability'     	=> 'edit_theme_options',
@@ -307,7 +307,7 @@ You can Visit the Travel Extend <a target="_blank" href="'. esc_url('http://demo
         'settings'   => 'travel[fcontent-description' . $fbsinumberd .']',
 		'type' 		 => 'textarea'
     ));
-	
+
 	$wp_customize->add_setting('travel[fcontent-link' . $fbsinumberd . ']', array(
         'default'        	=> '#',
         'capability'     	=> 'edit_theme_options',

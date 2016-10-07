@@ -7,7 +7,7 @@
 ?>
 
 <div class="featured-boxs">
-<?php foreach (range(1, 3) as $fboxn) { ?>
+<?php foreach (range(1, 6) as $fboxn) { ?>
 <span class="featured-box">
 <h2><?php echo esc_textarea(travel_get_option('featured01-title' . $fboxn, 'Featured')); ?><span> <?php echo esc_textarea(travel_get_option('featured02-title' . $fboxn, 'Image')); ?></span></h2>
 <a href="<?php echo esc_textarea(travel_get_option('featured-link' . $fboxn, '#')); ?>">
