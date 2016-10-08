@@ -419,12 +419,12 @@ Repeatable Patterns
 	strong {
 		font-weight: 600;
 	}
-	h1 { font: 52px/1.1 "Raleway", sans-serif;}
-	h2 { font: 42px/1.1 "Raleway", sans-serif;}
-	h3 { font: 32px/1.1 "Raleway", sans-serif;}
-	h4 { font: 25px/1.1 "Raleway", sans-serif;}
-	h5 { font: 20px/1.1 "Raleway", sans-serif;}
-	h6 { font: 18px/1.1 "Raleway", sans-serif;}
+	h1 { font: 52px/1.1 Arial,Helvetica,sans-serif;}
+	h2 { font: 42px/1.1 Arial,Helvetica,sans-serif;}
+	h3 { font: 32px/1.1 Arial,Helvetica,sans-serif;}
+	h4 { font: 25px/1.1 Arial,Helvetica,sans-serif;}
+	h5 { font: 20px/1.1 Arial,Helvetica,sans-serif;}
+	h6 { font: 18px/1.1 Arial,Helvetica,sans-serif;}
 	h1, h2, h3, h4, h5, h6 {
 		color: #443f3f;
 		font-weight: 600;
@@ -709,7 +709,8 @@ Header
 		position: relative;
 		display: block;
 		font-size: 14px;
-		font-family: "Raleway", sans-serif;
+		/*font-family: "Raleway", sans-serif;*/
+		font-family: Arial,Helvetica,sans-serif;
 		color: #fff;
 		font-weight: 500;
 		text-decoration: none;
@@ -2840,7 +2841,7 @@ Panels
 		background-color: #d65050;
 	}
 	.content-area .hentry:after {
-		background-color: #d65050;
+		/*background-color: #d65050;*/
 	}
 	.hentry .meta-post a:hover {
 		color: #d65050;
@@ -3178,6 +3179,9 @@ Panels
 		.site-title {
 			font-size: 22px !important;
 		}
+		.products .product-item {
+			width: 100%;
+		}
 	}
 	/* Mobile Portrait Size */
 	@media only screen and (max-width: 479px) {
@@ -3201,10 +3205,18 @@ Panels
 		.text-slider {
 			margin-bottom: 15px;
 		}
+		.products .product-item {
+			width: 100%;
+		}
 	}
 	@media only screen and (max-width: 320px) {
 		.text-slider {
 			margin-bottom: 0;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		.products .product-item {
+			width: 50%;
 		}
 	}
 /**
@@ -3213,4 +3225,76 @@ Panels
 
 .header-wrap .site-title {
 	text-align: center;
+}
+/*--------------------------------------------------------------
+Product section
+--------------------------------------------------------------*/
+.products .product-item {
+	background: url('images/fbcback.png') repeat scroll 0 0 #CCCCCC;
+  border: 2px solid #FFFFFF;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+}
+
+.featured-boxs, .products {
+  display: inline-block;
+}
+.featured-boxs img,
+.products img {
+	cursor: pointer;
+  margin: 0 auto;
+  padding: 10px;
+  -webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-o-transition:all 1s;
+	-ms-transition:all 1s;
+	transition:all 1s;
+}
+
+.featured-boxs img:hover,
+.products img:hover {
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(.99);
+	-o-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	background:#00ACCF;
+}
+.products .product-title {
+	font-size: 20px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+.products .product-title span {
+	color: #00ACCF;
+}
+.products .product-price, .products .product-description {
+	padding-left: 10px;
+}
+.products .price-value {
+	color: #F00000;
+  font-weight: 600;
+  font-size: 25px;
+}
+.products .product-description {
+	font-size: 18px;
+}
+.products .product-detail {
+	float: right;
+}
+.products .product-detail a {
+	color: #00F;
+	font-size: 16px;
+	cursor: pointer;
+}
+body {
+	font-family: Arial,Helvetica,sans-serif;
+}
+body .page-wrap {
+	background-color: #767676;
+}
+body .page-wrap .content-wrapper {
+	background-color: #FFFFFF;
 }

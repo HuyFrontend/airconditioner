@@ -19,14 +19,16 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sydney' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'sydney' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %2$s by %1$s.', 'sydney' ), 'aThemes', '<a href="http://athemes.com/theme/sydney" rel="designer">Sydney</a>' ); ?>
+			<h3 class="footer-title">Cơ sở Café rang An Nhiên</h3>
+			<p>[ĐC] - 32 Đường số 5, KDC Hiệp Bình, Q. Thủ Đức</p>
+			<p>[ĐT] - 0942.404.202 - 089.893.2519</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<script type="text/javascript" src=<?php echo get_template_directory_uri() . 'js/main.js';?> ></script>
 
 </body>
 </html>
