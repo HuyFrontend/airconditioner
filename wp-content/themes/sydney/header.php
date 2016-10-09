@@ -18,7 +18,6 @@
 		<link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('site_favicon')); ?>" />
 	<?php endif; ?>
 <?php endif; ?>
-
 <?php wp_head(); ?>
 </head>
 

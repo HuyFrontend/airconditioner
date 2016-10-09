@@ -3238,11 +3238,6 @@ Product section
   padding: 15px;
   position: relative;
 }
-
-.featured-boxs, .products {
-  display: inline-block;
-}
-.featured-boxs img,
 .products img {
 	cursor: pointer;
   margin: 0 auto;
@@ -3253,8 +3248,6 @@ Product section
 	-ms-transition:all 1s;
 	transition:all 1s;
 }
-
-.featured-boxs img:hover,
 .products img:hover {
 	-webkit-transform:scale(1.03);
 	-moz-transform:scale(.99);
@@ -3266,17 +3259,19 @@ Product section
 .products .product-title {
 	font-size: 20px;
 	font-family: Arial,Helvetica,sans-serif;
+	padding-left: 10px;
 }
 .products .product-title span {
 	color: #00ACCF;
 }
-.products .product-price, .products .product-description {
+.products .product-description {
 	padding-left: 10px;
 }
-.products .price-value {
+.products .product-price {
 	color: #F00000;
   font-weight: 600;
   font-size: 25px;
+  padding: 10px 0 10px 10px;
 }
 .products .product-description {
 	font-size: 18px;
