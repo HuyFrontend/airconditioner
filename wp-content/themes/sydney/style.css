@@ -3300,7 +3300,7 @@ Product section
   border-radius: 20px;
   border: 2px solid #1dcfd1;
   color: #333;
-  padding: 10px 20px;
+  padding: 6px 20px;
 }
 .products .product-detail a:hover {
 	color: #FFFFFF;
@@ -3350,8 +3350,8 @@ Footer section
 	border-radius: 100%;
   cursor: pointer;
   display: inline-block;
-  margin-right: 25px;
-  margin-left: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
   padding: 1px;
   text-align: center;
 }

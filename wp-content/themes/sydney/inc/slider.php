@@ -44,8 +44,19 @@ function sydney_slider_template() {
 
     <div id="slideshow" class="header-slider" data-speed="<?php echo esc_attr($speed); ?>">
         <div class="slides-container">
+            <div class="slide-item" style="background-image:url(<?php echo get_template_directory_uri() . '/images/slide-1.jpg'; ?>)">
+                <div class="slide-inner">
+                    <div class="contain animated fadeInRightBig text-slider">
+                        <h2 class="maintitle"><?php echo esc_html($slider_title_1); ?></h2>
+                        <p class="subtitle"><?php echo esc_html($slider_subtitle_1); ?></p>
+                    </div>
+                    <a class="roll-button button-slider btn-slider btn-product">Sản phẩm</a>
+                </div>
+            </div>
+                    
             <?php
                 if ( get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg') ) {
+                    
                     echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg')) . ');">';
                     ?>
                         <div class="slide-inner">
@@ -84,33 +95,7 @@ function sydney_slider_template() {
                         </div>
                     <?php
                     echo '</div>';
-                }
-                if ( get_theme_mod('slider_image_4') ) {
-                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_4')) . ');">';
-                    ?>
-                        <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h2 class="maintitle"><?php echo esc_html($slider_title_4); ?></h2>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_4); ?></p>
-                            </div>
-                            <?php sydney_slider_button(); ?>
-                        </div>
-                    <?php
-                    echo '</div>';
-                }
-                if ( get_theme_mod('slider_image_5') ) {
-                    echo '<div class="slide-item" style="background-image:url(' . esc_url(get_theme_mod('slider_image_5')) . ');">';
-                    ?>
-                        <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h2 class="maintitle"><?php echo esc_html($slider_title_5); ?></h2>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_5); ?></p>
-                            </div>
-                            <?php sydney_slider_button(); ?>
-                        </div>
-                    <?php
-                    echo '</div>';
-                }
+                }                
             ?>
         </div>
     </div>
