@@ -3215,6 +3215,9 @@ Panels
 		.products .product-item {
 			width: 50%;
 		}
+		.post .entry-content img{
+			width: 700px;
+		}
 	}
 /**
 ** Custom Css
@@ -3309,7 +3312,7 @@ Product section
 /*--------------------------------------------------------------
 Right menu section
 --------------------------------------------------------------*/
-.search-form .search-field {
+/*.search-form .search-field {
 	border-radius: 10px;
 }
 .widget, .widget_search {
@@ -3325,7 +3328,7 @@ Right menu section
   background: rgba(88, 94, 95, 0.11);
   overflow: hidden;
   border-radius: 10px;
-}
+}*/
 /*--------------------------------------------------------------
 Footer section
 --------------------------------------------------------------*/
@@ -3370,3 +3373,7 @@ Footer section
 .footer_section .web-author {
 	color: #22a1c4 !important;
 }
+/*--------------------------------------------------------------
+Post section
+--------------------------------------------------------------*/
+
