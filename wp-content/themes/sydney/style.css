@@ -3274,12 +3274,16 @@ Product section
 	font-size: 20px;
 	font-family: Arial,Helvetica,sans-serif;
 	padding-left: 10px;
+  text-transform: uppercase;
 }
 .products .product-title span {
 	color: #00ACCF;
 }
 .products .product-description {
 	padding-left: 10px;
+	line-height: 1.5em;
+  height: 3em;       /* height is 2x line-height, so two lines will display */
+  overflow: hidden;
 }
 .products .product-price {
 	color: #F00000;
@@ -3287,7 +3291,8 @@ Product section
   font-size: 25px;
   padding: 10px 0 10px 10px;
 }
-.products .product-description {
+.products .product-description,
+.products .product-status {
 	font-size: 18px;
 }
 .products .product-detail {
@@ -3376,4 +3381,31 @@ Footer section
 /*--------------------------------------------------------------
 Post section
 --------------------------------------------------------------*/
-
+/*--Shop CSS--*/
+.product-info .product-thumb {
+  width: 100%;
+}
+.product-info .product-thumb img {
+	width: 500px;
+}
+.product-info .product-title {
+	padding-top: 10px;
+}
+.product-info .product-title h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  color: #00ACCF;
+}
+.product-info .product-price {
+	color: #F00000;
+  font-weight: 500;
+  font-size: 18px;
+}
+.product-price, .product-status, .product-description {
+  margin: 5px 0;
+}
+.post-info {
+  clear: both;
+  padding-top: 15px;
+}
