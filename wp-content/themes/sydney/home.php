@@ -11,13 +11,13 @@ get_header(); ?>
 	<div id="primary" class="content-area col-md-9 <?php echo sydney_blog_layout(); ?>">
 		<main id="main" class="post-wrap" role="main">
 
-		<?php if ( !have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
 		<div class="posts-layout">
 			<section>
 				<h3 class="block-title">Các loại cà phê</h3>
         <div  class="products">
-        	<?php for ($i = 0; $i < 6; $i++){ ?>
+        	<?php for ($i = 2; $i < 2; $i++){ ?>
 				    <div class="product-item">
 							<span class="product-title">CAFÉ<span> LIBERICA</span></span>
 							<a>
