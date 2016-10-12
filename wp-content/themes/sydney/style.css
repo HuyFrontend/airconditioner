@@ -3219,6 +3219,12 @@ Panels
 			width: 700px;
 		}
 	}
+	@media only screen and (min-width: 1024px) {
+		.content-wrapper .widget-area {
+			padding-top: 30px;
+		}
+	}
+	
 /**
 ** Custom Css
 */
@@ -3275,12 +3281,13 @@ Product section
 	font-family: Arial,Helvetica,sans-serif;
 	padding-left: 10px;
   text-transform: uppercase;
+  color: rgba(63, 14, 14, 0.61);
+  font-weight: bold;
 }
 .products .product-title span {
 	color: #00ACCF;
 }
 .products .product-description {
-	padding-left: 10px;
 	line-height: 1.5em;
   height: 3em;       /* height is 2x line-height, so two lines will display */
   overflow: hidden;
@@ -3293,7 +3300,8 @@ Product section
 }
 .products .product-description,
 .products .product-status {
-	font-size: 18px;
+	font-size: 16px;
+	padding-left: 10px;
 }
 .products .product-detail {
 	float: right;
@@ -3334,6 +3342,9 @@ Right menu section
   overflow: hidden;
   border-radius: 10px;
 }*/
+.content-wrapper .widget-area {
+	padding-top: 30px;
+}
 /*--------------------------------------------------------------
 Footer section
 --------------------------------------------------------------*/
@@ -3408,4 +3419,10 @@ Post section
 .post-info {
   clear: both;
   padding-top: 15px;
+}
+/*--------------------------------------------------------------
+header overlay
+--------------------------------------------------------------*/
+.header-image .overlay {
+	display: none;
 }

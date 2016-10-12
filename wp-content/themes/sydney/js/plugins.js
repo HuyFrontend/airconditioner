@@ -13,14 +13,23 @@ var Site = (function($, window, undefined) {
     // to do
     console.log('plugin here!');
   };
-
+  var lazyLoadImg = function () {
+    var lazylement = $('.lazy-load');
+    console.info('load lazy');
+    lazylement.lazyload({
+      // container: $('.container'),
+      effect: 'fadeIn'
+    });
+  };
   return {
     publicVar: privateVar,
-    publicMethod: privateMethod
+    publicMethod: privateMethod,
+    lazyLoadImg: lazyLoadImg
   };
 
 })(jQuery, window);
 
 jQuery(function() {
   Site.publicMethod();
+  Site.lazyLoadImg();
 });
