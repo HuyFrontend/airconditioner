@@ -2049,7 +2049,7 @@ Panels
 	.roll-button {
 		position: relative;
 		display: inline-block;
-		font-family: "Raleway", sans-serif;
+		font-family: "Arial", sans-serif;
 		font-size: 13px;
 		line-height: 24px;
 		font-weight: 700;
@@ -3224,7 +3224,7 @@ Panels
 			padding-top: 30px;
 		}
 	}
-	
+
 /**
 ** Custom Css
 */

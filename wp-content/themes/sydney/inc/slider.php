@@ -44,10 +44,10 @@ function sydney_slider_template() {
 
     <div id="slideshow" class="header-slider" data-speed="<?php echo esc_attr($speed); ?>">
         <div class="slides-container">
-                    
+
             <?php
                 if ( get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg') ) {
-                    
+
                     echo '<div class="slide-item lazy-load" style="background-image:url(' . esc_url(get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg')) . ');">';
                     ?>
                         <div class="slide-inner">
@@ -86,7 +86,7 @@ function sydney_slider_template() {
                         </div>
                     <?php
                     echo '</div>';
-                }                
+                }
             ?>
         </div>
     </div>
@@ -103,10 +103,10 @@ endif;
 function sydney_slider_button() {
 
     if ( !function_exists('pll_register_string') ) {
-        $slider_button      = get_theme_mod('slider_button_text', 'Click to begin');
+        $slider_button      = get_theme_mod('slider_button_text', 'Sản phẩm');
         $slider_button_url  = get_theme_mod('slider_button_url','#primary');
     } else {
-        $slider_button      = pll__(get_theme_mod('slider_button_text', 'Click to begin'));
+        $slider_button      = pll__(get_theme_mod('slider_button_text', 'Sản phẩm'));
         $slider_button_url  = pll__(get_theme_mod('slider_button_url','#primary'));
     }
 
