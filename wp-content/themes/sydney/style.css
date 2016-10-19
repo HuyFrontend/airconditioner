@@ -3249,6 +3249,9 @@ Header section
 /*--------------------------------------------------------------
 Product section
 --------------------------------------------------------------*/
+.products {
+	display: inline-block;
+}
 .products .product-item {
 	background: url('images/fbcback.png') repeat scroll 0 0 #CCCCCC;
   border: 2px solid #FFFFFF;
@@ -3426,3 +3429,23 @@ header overlay
 .header-image .overlay {
 	display: none;
 }
+/*--------------------------------------------------------------
+Page Intro
+--------------------------------------------------------------*/
+.introduction .intro-title {
+	text-transform: uppercase;
+	background: #F0F8FF;
+}
+.introduction .intro-list {
+	text-align: justify;
+}
+.introduction .intro-list .intro-tel,
+.contact-group .contact-phone .phone-number{
+	color: #F00;
+}
+.introduction .intro-signature{
+	text-align: right;
+	font-weight: bold;
+	font-style: italic;
+}
+

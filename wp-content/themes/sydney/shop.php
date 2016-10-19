@@ -25,16 +25,16 @@ get_header(); ?>
 
             <?php while ($wp_query->have_posts()) : $wp_query->the_post(); $count++; ?>
               <div class="product-item" id="product-<?php the_ID(); ?>">
-                <div class="">
-                  <span class="product-title"> <?php the_title(); ?> </span>
+                <div class="product-title">
+                  <a class="" href="<?php the_permalink();?>"> <?php the_title(); ?> </a>
                 </div>
                 <a>
                   <?php $product_img_value = get_post_meta( $post->ID, 'product_image', true );
                     $image_attributes = wp_get_attachment_image_src($product_img_value);
-                    if ( !$image_attributes ) : ?>
-                      <img class="lazy-load" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
+                    if ( $image_attributes ) : ?>
+                      <img class="lazy-load" style="display:none;" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
                     <?php endif; ?>
-                  
+
                   <img class="lazy-load" href="<?php the_permalink(); ?>" src=<?php echo get_template_directory_uri() . '/images/coffee-900x556.jpg'; ?> alt="photo-10"/>
                 </a>
                 <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span>đ</span>

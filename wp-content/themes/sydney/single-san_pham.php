@@ -18,15 +18,15 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="product-info">
+          <div class="product-title">
+            <h1><?php the_title(); ?></h1>
+          </div>
           <div class="product-thumb">
-          <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
+            <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
             $image_attributes = wp_get_attachment_image_src($attachment_id);
             if ( $image_attributes ) : ?>
                 <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
             <?php endif; ?>
-          </div>
-          <div class="product-title">
-            <h1><?php the_title(); ?></h1>
           </div>
           <div class="product-price">
             <?php echo "<strong>Giá:</strong> ". get_post_meta( $post->ID, 'product_price', true ); ?>
@@ -36,7 +36,7 @@ get_header(); ?>
             ?>
           </div>
         <div class="product-description">
-          <?php echo "<strong>Mô tả:</strong> ". get_post_meta( $post->ID, 'product_description', true ); ?>
+          <?php echo "<strong>Đặc trưng:</strong> ". get_post_meta( $post->ID, 'product_description', true ); ?>
         </div>
       </div>
 
