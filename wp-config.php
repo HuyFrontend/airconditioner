@@ -20,16 +20,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'a5966243_annhien');
+define('DB_NAME', 'cafeannh_database_20102016');
+// define('DB_NAME', 'a5966243_annhien');
 
 /** MySQL database username */
-define('DB_USER', 'a5966243_annhien');
+define('DB_USER', 'cafeannh_user1');
+// define('DB_USER', 'a5966243_annhien');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'Pokemon@123');
 
 /** MySQL hostname */
-define('DB_HOST', 'mysql9.000webhost.com');
+// define('DB_HOST', 'mysql9.000webhost.com');
+define('DB_HOST', '');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -63,6 +66,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
+define('WP_CACHE', true);
 $table_prefix  = 'wp_';
 
 /**

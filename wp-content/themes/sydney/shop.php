@@ -16,7 +16,7 @@ get_header(); ?>
       <?php  $temp = $wp_query;
         $wp_query = null;
         $wp_query = new WP_Query();
-        $wp_query->query('showposts=6&post_type=san_pham'.'&paged='.$paged);
+        $wp_query->query('showposts=6&post_type=prod'.'&paged='.$paged);
         $count = 0;?>
       <div class="posts-layout">
         <section>

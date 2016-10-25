@@ -37,12 +37,7 @@
       <div class="container">
         <div class="row">
 					<div class="col-md-4 col-sm-8 col-xs-12 site-title">
-			      <?php if ( get_theme_mod('site_logo') ) : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-slogan-an-blue.png'; ?>" alt="<?php bloginfo('name'); ?>" /></a>
-			      <?php else : ?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			      <?php endif; ?>
 					</div>
 					<div class="col-md-8 col-sm-4 col-xs-12">
 						<div class="btn-menu"></div>
@@ -58,7 +53,7 @@
 
 	<div class="header-image">
 		<?php sydney_header_overlay(); ?>
-		<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+		<img class="header-inner 111" src="<?php get_template_directory_uri() . '/images/slide-1.jpg'; ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
 	</div>
 
 	<div id="content" class="page-wrap">
