@@ -15,79 +15,49 @@ function sydney_slider_template() {
     $speed      = get_theme_mod('slider_speed', '4000');
     $text_slide = get_theme_mod('textslider_slide', 0);
 
-    //Slider text
-    if ( !function_exists('pll_register_string') ) {
-        $slider_title_1     = get_theme_mod('slider_title_1', 'Welcome to Sydney');
-        $slider_title_2     = get_theme_mod('slider_title_2', 'Ready to begin your journey?');
-        $slider_title_3     = get_theme_mod('slider_title_3');
-        $slider_title_4     = get_theme_mod('slider_title_4');
-        $slider_title_5     = get_theme_mod('slider_title_5');
-        $slider_subtitle_1  = get_theme_mod('slider_subtitle_1','Feel free to look around');
-        $slider_subtitle_2  = get_theme_mod('slider_subtitle_2', 'Click the button below');
-        $slider_subtitle_3  = get_theme_mod('slider_subtitle_3');
-        $slider_subtitle_4  = get_theme_mod('slider_subtitle_4');
-        $slider_subtitle_5  = get_theme_mod('slider_subtitle_5');
-    } else {
-        $slider_title_1     = pll__(get_theme_mod('slider_title_1', 'Welcome to Sydney'));
-        $slider_title_2     = pll__(get_theme_mod('slider_title_2', 'Ready to begin your journey?'));
-        $slider_title_3     = pll__(get_theme_mod('slider_title_3'));
-        $slider_title_4     = pll__(get_theme_mod('slider_title_4'));
-        $slider_title_5     = pll__(get_theme_mod('slider_title_5'));
-        $slider_subtitle_1  = pll__(get_theme_mod('slider_subtitle_1','Feel free to look around'));
-        $slider_subtitle_2  = pll__(get_theme_mod('slider_subtitle_2', 'Click the button below'));
-        $slider_subtitle_3  = pll__(get_theme_mod('slider_subtitle_3'));
-        $slider_subtitle_4  = pll__(get_theme_mod('slider_subtitle_4'));
-        $slider_subtitle_5  = pll__(get_theme_mod('slider_subtitle_5'));
-    }
-
+    $slide_title_welcome = 'Welcome to An Nhiên';
+    $slide_title_an_nhien = 'Ừ thì An Nhiên';
+    $slide_sub_from_to = 'Từ cà phê hạt đến cà phê rang';
+    $slide_sub_rain = 'An nhiên những cơn mưa tháng Tám';
+    $slide_sub_new_date = 'Ngày mới lên thắm hương vị ấm nồng';
+    $slide_btn_text = 'Sản phẩm';
+    $slide_img_1 = '/images/slide-1.jpg';
+    $slide_img_2 = '/images/slide-2.jpg';
+    $slide_img_3 = '/images/slide-3.jpg';
     ?>
 
     <div id="slideshow" class="header-slider" data-speed="<?php echo esc_attr($speed); ?>">
         <div class="slides-container">
 
-            <?php
-                if ( get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg') ) {
+            <div class="slide-item" style="background-image:url(<?php echo get_template_directory_uri() . $slide_img_1; ?>)">
+                <div class="slide-inner">
+                    <div class="contain animated fadeInRightBig text-slider">
+                        <h2 class="maintitle"><?php echo esc_html($slide_title_welcome); ?></h2>
+                        <p class="subtitle"><?php echo esc_html($slide_sub_from_to); ?></p>
+                    </div>
+                    <a href="#primary" class="roll-button button-slider btn-slider btn-product"><?php echo esc_html($slide_btn_text); ?></a>
+                </div>
+            </div>
 
-                    echo '<div class="slide-item lazy-load" style="background-image:url(' . esc_url(get_theme_mod('slider_image_1', get_template_directory_uri() . '/images/slide-1.jpg')) . ');">';
-                    ?>
-                        <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h2 class="maintitle"><?php echo esc_html($slider_title_1); ?></h2>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_1); ?></p>
-                            </div>
-                            <?php sydney_slider_button(); ?>
-                        </div>
-                    <?php
-                    echo '</div>';
+            <div class="slide-item" style="background-image:url(<?php echo get_template_directory_uri() . $slide_img_2; ?>)">
+                <div class="slide-inner">
+                    <div class="contain animated fadeInRightBig text-slider">
+                        <h2 class="maintitle"><?php echo esc_html($slide_title_an_nhien); ?></h2>
+                        <p class="subtitle"><?php echo esc_html($slide_sub_rain); ?></p>
+                    </div>
+                    <a href="#primary" class="roll-button button-slider btn-slider btn-product"><?php echo esc_html($slide_btn_text); ?></a>
+                </div>
+            </div>
 
-                }
-                if ( get_theme_mod('slider_image_2', get_template_directory_uri() . '/images/slide-2.jpg') ) {
-                    echo '<div class="slide-item lazy-load" style="background-image:url(' . esc_url(get_theme_mod('slider_image_2', get_template_directory_uri() . '/images/slide-2.jpg')) . ');">';
-                    ?>
-                        <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h2 class="maintitle"><?php echo esc_html($slider_title_2); ?></h2>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_2); ?></p>
-                            </div>
-                            <?php sydney_slider_button(); ?>
-                        </div>
-                    <?php
-                    echo '</div>';
-                }
-                if ( get_theme_mod('slider_image_3', get_template_directory_uri() . '/images/slide-3.jpg') ) {
-                    echo '<div class="slide-item lazy-load" style="background-image:url(' . esc_url(get_theme_mod('slider_image_3', get_template_directory_uri() . '/images/slide-3.jpg')) . ');">';
-                    ?>
-                        <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h2 class="maintitle"><?php echo esc_html($slider_title_3); ?></h2>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_3); ?></p>
-                            </div>
-                            <?php sydney_slider_button(); ?>
-                        </div>
-                    <?php
-                    echo '</div>';
-                }
-            ?>
+            <div class="slide-item" style="background-image:url(<?php echo get_template_directory_uri() . $slide_img_3; ?>)">
+                <div class="slide-inner">
+                    <div class="contain animated fadeInRightBig text-slider">
+                        <h2 class="maintitle"><?php echo esc_html($slide_title_an_nhien); ?></h2>
+                        <p class="subtitle"><?php echo esc_html($slide_sub_new_date); ?></p>
+                    </div>
+                    <a href="#primary" class="roll-button button-slider btn-slider btn-product"><?php echo esc_html($slide_btn_text); ?></a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -135,3 +105,4 @@ function sydney_stop_text() {
     </div>
     <?php
 }
+
