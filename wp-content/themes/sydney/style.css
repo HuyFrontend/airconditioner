@@ -3428,6 +3428,9 @@ Post section
 }
 .type-post .entry-content {
 	text-align: justify;
+	background: url(images/backgroud-white-icream.png) repeat scroll 0 0 #CCCCCC;
+	padding: 30px;
+	color: #000;
 }
 /*--------------------------------------------------------------
 header overlay
