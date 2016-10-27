@@ -24,6 +24,7 @@
 		<li><a href="https://www.facebook.com/CafeAnNhien/" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="https://plus.google.com/111877956106983357843" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 		<li><a href="https://www.pinterest.com/CafeAnNhien/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+		<li><a href="https://www.instagram.com/CafeAnNhien/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 	</ul>
 </div>
 <div class="container">

@@ -17,7 +17,7 @@ function sydney_slider_template() {
 
     $slide_title_welcome = 'Welcome to An Nhiên';
     $slide_title_an_nhien = 'Ừ thì An Nhiên';
-    $slide_sub_from_to = 'Từ cà phê hạt đến cà phê rang';
+    $slide_sub_from_to = 'Nơi cà phê đến từ hạt cà phê';
     $slide_sub_rain = 'An nhiên những cơn mưa tháng Tám';
     $slide_sub_new_date = 'Ngày mới lên thắm hương vị ấm nồng';
     $slide_btn_text = 'Sản phẩm';

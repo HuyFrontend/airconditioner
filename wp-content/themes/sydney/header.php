@@ -11,13 +11,15 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:url" content="http://cafeannhien.com/">
+<meta property="og:title" content="Cà phê rang xay An Nhiên">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://dn.api1.kage.kakao.co.kr/14/dn/btqaWlTUTtD/Jtsl6FoQWSZG1rb2wAEEy1/o.jpg">
+<meta property="og:description" content="Cung cấp các loại cà phê rang xay mộc, nguyên chất">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) : ?>
-	<?php if ( get_theme_mod('site_favicon') ) : ?>
-		<link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('site_favicon')); ?>" />
-	<?php endif; ?>
-<?php endif; ?>
+
+<link rel="shortcut icon" type="image/jpg" href=<?php echo get_template_directory_uri() . '/images/2.jpg';?> />
 <?php wp_head(); ?>
 <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/jquery.lazyload.js';?> ></script>
 </head>

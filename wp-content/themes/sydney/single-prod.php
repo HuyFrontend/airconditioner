@@ -23,9 +23,9 @@ get_header(); ?>
           </div>
           <div class="product-thumb">
             <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
-            $image_attributes = wp_get_attachment_image_src($attachment_id);
+            $image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
             if ( $image_attributes ) : ?>
-                <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
+                <img  src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
             <?php endif; ?>
           </div>
           <div class="product-price">

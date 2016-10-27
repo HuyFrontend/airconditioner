@@ -3402,7 +3402,8 @@ Post section
   width: 100%;
 }
 .product-info .product-thumb img {
-	width: 500px;
+	/*width: 480px;
+	height: 280px;*/
 }
 .product-info .product-title {
 	padding-top: 10px;
