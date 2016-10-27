@@ -3350,6 +3350,9 @@ Right menu section
 .content-wrapper .widget-area {
 	padding-top: 30px;
 }
+#secondary .widget_recent_entries > ul > li > a:hover {
+	color: #d65050;
+}
 /*--------------------------------------------------------------
 Footer section
 --------------------------------------------------------------*/
