@@ -2876,7 +2876,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		}
 	} else {
 		if ( get_option( 'comment_registration' ) ) {
-			return new WP_Error( 'not_logged_in', __( 'Sorry, you must be logged in to post a comment.' ), 403 );
+			return new WP_Error( 'not_logged_in', __( 'Hãy đăng nhập để bình luận.' ), 403 );
 		}
 	}
 
@@ -2885,28 +2885,28 @@ function wp_handle_comment_submission( $comment_data ) {
 
 	if ( get_option( 'require_name_email' ) && ! $user->exists() ) {
 		if ( 6 > strlen( $comment_author_email ) || '' == $comment_author ) {
-			return new WP_Error( 'require_name_email', __( '<strong>ERROR</strong>: please fill the required fields (name, email).' ), 200 );
+			return new WP_Error( 'require_name_email', __( '<strong>Lỗi</strong>: Hãy nhập tên/email.' ), 200 );
 		} elseif ( ! is_email( $comment_author_email ) ) {
-			return new WP_Error( 'require_valid_email', __( '<strong>ERROR</strong>: please enter a valid email address.' ), 200 );
+			return new WP_Error( 'require_valid_email', __( '<strong>Lỗi</strong>: Email chưa đúng định dạng.' ), 200 );
 		}
 	}
 
 	if ( isset( $comment_author ) && $max_lengths['comment_author'] < mb_strlen( $comment_author, '8bit' ) ) {
-		return new WP_Error( 'comment_author_column_length', __( '<strong>ERROR</strong>: your name is too long.' ), 200 );
+		return new WP_Error( 'comment_author_column_length', __( '<strong>Lỗi</strong>: Tên quá dài.' ), 200 );
 	}
 
 	if ( isset( $comment_author_email ) && $max_lengths['comment_author_email'] < strlen( $comment_author_email ) ) {
-		return new WP_Error( 'comment_author_email_column_length', __( '<strong>ERROR</strong>: your email address is too long.' ), 200 );
+		return new WP_Error( 'comment_author_email_column_length', __( '<strong>Lỗi</strong>: Email quá dài.' ), 200 );
 	}
 
 	if ( isset( $comment_author_url ) && $max_lengths['comment_author_url'] < strlen( $comment_author_url ) ) {
-		return new WP_Error( 'comment_author_url_column_length', __( '<strong>ERROR</strong>: your url is too long.' ), 200 );
+		return new WP_Error( 'comment_author_url_column_length', __( '<strong>Lỗi</strong>: Đường dẫn quá dài.' ), 200 );
 	}
 
 	if ( '' == $comment_content ) {
-		return new WP_Error( 'require_valid_comment', __( '<strong>ERROR</strong>: please type a comment.' ), 200 );
+		return new WP_Error( 'require_valid_comment', __( '<strong>Lỗi</strong>: Hãy nhập nội dung bình luận.' ), 200 );
 	} elseif ( $max_lengths['comment_content'] < mb_strlen( $comment_content, '8bit' ) ) {
-		return new WP_Error( 'comment_content_column_length', __( '<strong>ERROR</strong>: your comment is too long.' ), 200 );
+		return new WP_Error( 'comment_content_column_length', __( '<strong>Lỗi</strong>: Bình luận quá dài.' ), 200 );
 	}
 
 	$commentdata = compact(
@@ -2922,7 +2922,7 @@ function wp_handle_comment_submission( $comment_data ) {
 
 	$comment_id = wp_new_comment( wp_slash( $commentdata ) );
 	if ( ! $comment_id ) {
-		return new WP_Error( 'comment_save_error', __( '<strong>ERROR</strong>: The comment could not be saved. Please try again later.' ), 500 );
+		return new WP_Error( 'comment_save_error', __( '<strong>Lỗi</strong>: Đã xảy ra lỗi, hãy trở lại sau.' ), 500 );
 	}
 
 	return get_comment( $comment_id );

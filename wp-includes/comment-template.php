@@ -1864,8 +1864,8 @@ function comment_id_fields( $id = 0 ) {
 function comment_form_title( $noreplytext = false, $replytext = false, $linktoparent = true ) {
 	global $comment;
 
-	if ( false === $noreplytext ) $noreplytext = __( 'Leave a Reply' );
-	if ( false === $replytext ) $replytext = __( 'Leave a Reply to %s' );
+	if ( false === $noreplytext ) $noreplytext = __( 'Bình luận' );
+	if ( false === $replytext ) $replytext = __( 'Bình luận %s' );
 
 	$replytoid = isset($_GET['replytocom']) ? (int) $_GET['replytocom'] : 0;
 
@@ -2141,8 +2141,8 @@ function wp_list_comments( $args = array(), $comments = null ) {
  *     @type string $class_form           The comment form element class attribute. Default 'comment-form'.
  *     @type string $class_submit         The comment submit element class attribute. Default 'submit'.
  *     @type string $name_submit          The comment submit element name attribute. Default 'submit'.
- *     @type string $title_reply          The translatable 'reply' button label. Default 'Leave a Reply'.
- *     @type string $title_reply_to       The translatable 'reply-to' button label. Default 'Leave a Reply to %s',
+ *     @type string $title_reply          The translatable 'reply' button label. Default 'Bình luận'.
+ *     @type string $title_reply_to       The translatable 'reply-to' button label. Default 'Bình luận %s',
  *                                        where %s is the author of the comment being replied to.
  *     @type string $title_reply_before   HTML displayed before the comment form title.
  *                                        Default: '<h3 id="reply-title" class="comment-reply-title">'.
@@ -2178,7 +2178,7 @@ function comment_form( $args = array(), $post_id = null ) {
 	$html_req = ( $req ? " required='required'" : '' );
 	$html5    = 'html5' === $args['format'];
 	$fields   =  array(
-		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Tên' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
 		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
@@ -2186,7 +2186,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		            '<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
 	);
 
-	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
+	$required_text = sprintf( ' ' . __('Những ô bắt buộc được đánh dấu %s'), '<span class="required">*</span>' );
 
 	/**
 	 * Filters the default comment form fields.
@@ -2198,24 +2198,24 @@ function comment_form( $args = array(), $post_id = null ) {
 	$fields = apply_filters( 'comment_form_default_fields', $fields );
 	$defaults = array(
 		'fields'               => $fields,
-		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Bình luận', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 		/** This filter is documented in wp-includes/link-template.php */
 		'must_log_in'          => '<p class="must-log-in">' . sprintf(
 		                              /* translators: %s: login URL */
-		                              __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+		                              __( 'Cần phải <a href="%s">Đăng nhập</a> để gởi bình luận.' ),
 		                              wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
 		                          ) . '</p>',
 		/** This filter is documented in wp-includes/link-template.php */
 		'logged_in_as'         => '<p class="logged-in-as">' . sprintf(
 		                              /* translators: 1: edit user link, 2: accessibility text, 3: user name, 4: logout URL */
-		                              __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
+		                              __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Thoát?</a>' ),
 		                              get_edit_user_link(),
 		                              /* translators: %s: user name */
-		                              esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
+		                              esc_attr( sprintf( __( 'Đã đăng nhập với %s. Thay đổi thông tin.' ), $user_identity ) ),
 		                              $user_identity,
 		                              wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
 		                          ) . '</p>',
-		'comment_notes_before' => '<p class="comment-notes"><span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span>'. ( $req ? $required_text : '' ) . '</p>',
+		'comment_notes_before' => '<p class="comment-notes"><span id="email-notes">' . __( 'Email của bạn sẽ được ẩn.' ) . '</span>'. ( $req ? $required_text : '' ) . '</p>',
 		'comment_notes_after'  => '',
 		'action'               => site_url( '/wp-comments-post.php' ),
 		'id_form'              => 'commentform',
@@ -2223,14 +2223,14 @@ function comment_form( $args = array(), $post_id = null ) {
 		'class_form'           => 'comment-form',
 		'class_submit'         => 'submit',
 		'name_submit'          => 'submit',
-		'title_reply'          => __( 'Leave a Reply' ),
-		'title_reply_to'       => __( 'Leave a Reply to %s' ),
+		'title_reply'          => __( 'Bình luận' ),
+		'title_reply_to'       => __( 'Bình luận %s' ),
 		'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title">',
 		'title_reply_after'    => '</h3>',
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
-		'cancel_reply_link'    => __( 'Cancel reply' ),
-		'label_submit'         => __( 'Post Comment' ),
+		'cancel_reply_link'    => __( 'Cancel' ),
+		'label_submit'         => __( 'Post' ),
 		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
 		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 		'format'               => 'xhtml',

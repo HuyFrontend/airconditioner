@@ -55,7 +55,7 @@
 
 	<div class="header-image">
 		<?php sydney_header_overlay(); ?>
-		<img class="header-inner 111" src="<?php get_template_directory_uri() . '/images/slide-1.jpg'; ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+		<img class="header-inner" src="<?php echo get_template_directory_uri() . '/images/slide-1.jpg'; ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
 	</div>
 
 	<div id="content" class="page-wrap">

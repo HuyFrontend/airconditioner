@@ -3426,6 +3426,9 @@ Post section
   clear: both;
   padding-top: 15px;
 }
+.type-post .entry-content {
+	text-align: justify;
+}
 /*--------------------------------------------------------------
 header overlay
 --------------------------------------------------------------*/
