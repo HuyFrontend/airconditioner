@@ -21,7 +21,10 @@
 
 <link rel="shortcut icon" type="image/png" href=<?php echo get_template_directory_uri() . '/images/favicon.png';?> />
 <?php wp_head(); ?>
-<script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/jquery.lazyload.js';?> ></script>
+<script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/jquery.lazyload.js';?>
+ ></script>
+ <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/libraries/all.js';?>
+ ></script>
 </head>
 
 <body <?php body_class(); ?>>

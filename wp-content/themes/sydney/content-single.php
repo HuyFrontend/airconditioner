@@ -13,7 +13,7 @@
 	<?php endif; ?>
 
 	<header class="entry-header">
-		<?php the_title( '<h1 class="title-post">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="title-post news-post">', '</h1>' ); ?>
 
 		<?php if (get_theme_mod('hide_meta_single') != 1 ) : ?>
 		<div class="meta-post">
@@ -21,7 +21,24 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	<!-- social sharing -->
+	<div class="content-share">
+		<a class="btn social-sharing share-facebook">
+			<i class="fa fa-facebook"></i>
+			<span class="share-desktop">Share on Facebook</span>
+			<span class="share-tablet">Share</span>
+		</a>
+		<a class="btn social-sharing share-twitter">
+			<i class="fa fa-twitter"></i>
+			<span class="share-desktop">Share on Twitter</span>
+			<span class="share-tablet">Tweet</span>
+		</a>
+		<a class="btn social-sharing share-pinterest">
+			<i class="fa fa-pinterest"></i>
+			<span class="share-desktop">Share on Pinterest</span>
+			<span class="share-tablet">Share</span>
+		</a>
+	</div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

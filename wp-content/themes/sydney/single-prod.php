@@ -24,25 +24,32 @@ get_header(); ?>
           <div class="product-image">
             <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
             $image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
+            $image_thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
             if ( $image_attributes ) : ?>
-                <img  src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
+                <div class="large-view">
+                  <img  src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
+                </div>
             <?php endif; ?>
-          </div>
-          <div class="thumb">
-            <?php
-            for($i = 0; $i < 5; $i++) {
-              $this_img = get_post_meta( $post->ID, "product_image_$i" .$i, true );
-              $this_img_thumb = wp_get_attachment_image_src($this_img, 'thumbnail');
-              $this_img_large = wp_get_attachment_image_src($this_img, 'large');
-              if($this_img_thumb) {
-                echo $this_img_thumb. "1234: $i <br>";
+
+            <!-- Thumb image -->
+            <div class="thumb" data-hover-image="true">
+              <img src="<?php echo $image_thumb[0]; ?>" width="50" data-src="<?php echo $image_attributes[0]; ?>"/>
+              <?php
+              for($i = 0; $i < 5; $i++) {
+                $field_name = "product_image_" .$i;
+                $this_img = get_post_meta( $post->ID, $field_name, true );
+                $this_img_thumb = wp_get_attachment_image_src($this_img, 'thumbnail');
+                $this_img_large = wp_get_attachment_image_src($this_img, 'large');
+                if($this_img_thumb) {
+                  $this_img_source = $this_img_thumb[0];
+                  $this_data_source = $this_img_large[0];
+                  echo "<img src=$this_img_source width=50 data-src=$this_data_source>";
+                }
               }
-              else {
-                echo 'tata';
-              }
-            }
-            ?>
+              ?>
+            </div>
           </div>
+
 
           <div class="product-price">
             <?php echo "<strong>Giá:</strong> ". get_post_meta( $post->ID, 'product_price', true ); ?>

@@ -78,7 +78,7 @@ function sydney_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'sydney' ),
+		_x( 'Đăng ngày %s', 'post date', 'sydney' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -88,7 +88,7 @@ function sydney_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
-	
+
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'sydney' ), __( '1 Comment', 'sydney' ), __( '% Comments', 'sydney' ) );
