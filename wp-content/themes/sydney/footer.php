@@ -21,7 +21,15 @@
 <div class="footer_section">
 	<div class="footer-social-area"><ul class="footer-social-icons">
 		<li><a href="https://twitter.com/CafeAnNhien" target="_blank"><i class="fa fa-twitter" title="Twitter"></i></a></li>
-		<li><a href="https://www.facebook.com/CafeAnNhien/" target="_blank"><i class="fa fa-facebook" title="Facebook"></i></a></li>
+		<li data-item-facebook><a class="facebook-footer" data-href="https://www.facebook.com/CafeAnNhien/" target="_blank"><i class="fa fa-facebook" title="Facebook"></i></a>
+		<a class="fb-like"
+			data-href="https://www.facebook.com/CafeAnNhien/"
+			data-layout="standard"
+			data-action="like"
+			data-show-faces="true"
+			style="display:none;">
+		</a>
+		</li>
 		<li><a href="https://plus.google.com/111877956106983357843" target="_blank"><i class="fa fa-google-plus" title="Google Plus"></i></a></li>
 		<li><a href="https://www.pinterest.com/CafeAnNhien/" target="_blank"><i class="fa fa-pinterest" title="Pinteresst"></i></a></li>
 		<li style="display:none;"><a href="https://www.instagram.com/CafeAnNhien/" target="_blank"><i class="fa fa-instagram"></i></a></li>

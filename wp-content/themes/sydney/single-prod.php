@@ -17,17 +17,18 @@ get_header(); ?>
     <main id="main" class="post-wrap product-iii" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
-        <div class="product-info">
+        <div class="product-info" data-share-content>
           <div class="product-title">
-            <h1><?php the_title(); ?></h1>
+            <h1 data-share-title><?php the_title(); ?></h1>
           </div>
+          <?php renderSocialSharing () ?>
           <div class="product-image">
             <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
             $image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
             $image_thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
             if ( $image_attributes ) : ?>
                 <div class="large-view">
-                  <img  src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
+                  <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" data-share-img/>
                 </div>
             <?php endif; ?>
 
@@ -81,3 +82,28 @@ get_header(); ?>
   get_sidebar();
 } ?>
 <?php get_footer(); ?>
+
+<?php
+function renderSocialSharing () {
+  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  ?>
+  <div class="content-share">
+    <a class="btn social-sharing share-facebook">
+      <i class="fa fa-facebook"></i>
+      <span class="share-desktop">Share on Facebook</span>
+      <span class="share-tablet">Share</span>
+    </a>
+    <a class="btn social-sharing share-twitter">
+      <i class="fa fa-twitter"></i>
+      <span class="share-desktop">Share on Twitter</span>
+      <span class="share-tablet">Tweet</span>
+    </a>
+    <a class="btn social-sharing share-pinterest">
+      <i class="fa fa-pinterest"></i>
+      <span class="share-desktop">Share on Pinterest</span>
+      <span class="share-tablet">Pin</span>
+    </a>
+  </div>
+<?php
+}
+?>

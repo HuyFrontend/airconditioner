@@ -3410,9 +3410,8 @@ Footer section
 	color: #22a1c4 !important;
 }
 /*--------------------------------------------------------------
-Post section
+Product
 --------------------------------------------------------------*/
-/*--Shop CSS--*/
 .product-info .product-thumb {
   width: 100%;
 }
@@ -3460,7 +3459,7 @@ header overlay
 	display: none;
 }
 /*--------------------------------------------------------------
-Page Intro
+Block Introduction
 --------------------------------------------------------------*/
 .introduction .intro-title {
 	text-transform: uppercase;
@@ -3481,6 +3480,13 @@ Page Intro
 /*--------------------------------------------------------------
 Social sharing
 --------------------------------------------------------------*/
+.content-share {
+	margin-bottom: 5px;
+}
+.social-sharing {
+	min-width: 40px;
+	text-align: center;
+}
 .share-facebook {
   background-color: #4b68b9;
   border-color: #344b8d;
@@ -3505,4 +3511,10 @@ Social sharing
   border-color: #344b8d;
   color: #ffffff!important;
   text-shadow: 0 -1px 0 #3b55a0;
+}
+/*--------------------------------------------------------------
+Comment
+--------------------------------------------------------------*/
+.comment-form-url {
+	display: none!important;
 }

@@ -25,6 +25,9 @@
  ></script>
  <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/libraries/all.js';?>
  ></script>
+ <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/libraries/widgets.js';?>
+ ></script>
+ <!-- FACEBOOK -->
 <script type="text/javascript">
 	window.fbAsyncInit = function() {
     FB.init({
@@ -40,6 +43,23 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- TWITTER -->
+<script>
+  window.twttr = (function(d, s, id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://platform.twitter.com/widgets.js';
+    fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = {
+      _e: [],
+      ready: function(f) {
+        t._e.push(f)
+      }
+    });
+  }(document, 'script', 'twitter-wjs'));
 </script>
 
 </head>
