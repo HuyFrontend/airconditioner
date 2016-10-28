@@ -32,16 +32,20 @@ var Site = (function($, window, undefined) {
   };
   var socialSharing = function () {
     var body = $('body');
-    var shareFacebook = function () {
+    var shareFacebook = function (currentHref) {
       var options = {
         method: 'share',
         display: 'popup',
-        href: 'cafeannhien.com'
+        href: currentHref
+        // caption: 'U Thi An Nhien - an nhien trong tung cafe giot',
+        // description: 'Dialogs provide a simple, consistent interface for applications to interface with users.',
+        // picture: 'http://fbrell.com/f8.jpg'
       };
       FB.ui(options, function(response){});
-    }
+    };
+
     body.off('click.shareFacebook').on('click.shareFacebook', '.share-facebook', function () {
-      shareFacebook();
+      shareFacebook(location.href);
     });
   };
 
