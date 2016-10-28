@@ -21,13 +21,29 @@ get_header(); ?>
           <div class="product-title">
             <h1><?php the_title(); ?></h1>
           </div>
-          <div class="product-thumb">
+          <div class="product-image">
             <?php $attachment_id = get_post_meta( $post->ID, 'product_image', true );
-            $image_attributes = wp_get_attachment_image_src($attachment_id, 'medium');
+            $image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
             if ( $image_attributes ) : ?>
                 <img  src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
             <?php endif; ?>
           </div>
+          <div class="thumb">
+            <?php
+            for($i = 0; $i < 5; $i++) {
+              $this_img = get_post_meta( $post->ID, "product_image_$i" .$i, true );
+              $this_img_thumb = wp_get_attachment_image_src($this_img, 'thumbnail');
+              $this_img_large = wp_get_attachment_image_src($this_img, 'large');
+              if($this_img_thumb) {
+                echo $this_img_thumb. "1234: $i <br>";
+              }
+              else {
+                echo 'tata';
+              }
+            }
+            ?>
+          </div>
+
           <div class="product-price">
             <?php echo "<strong>Giá:</strong> ". get_post_meta( $post->ID, 'product_price', true ); ?>
           </div>
