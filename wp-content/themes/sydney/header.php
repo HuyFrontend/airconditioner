@@ -19,7 +19,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<link rel="shortcut icon" type="image/jpg" href=<?php echo get_template_directory_uri() . '/images/2.jpg';?> />
+<link rel="shortcut icon" type="image/png" href=<?php echo get_template_directory_uri() . '/images/favicon.png';?> />
 <?php wp_head(); ?>
 <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/jquery.lazyload.js';?> ></script>
 </head>
@@ -39,7 +39,7 @@
       <div class="container">
         <div class="row">
 					<div class="col-md-4 col-sm-8 col-xs-12 site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-slogan-an-blue.png'; ?>" alt="<?php bloginfo('name'); ?>" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-slogan-281016.png'; ?>" alt="<?php bloginfo('name'); ?>" /></a>
 					</div>
 					<div class="col-md-8 col-sm-4 col-xs-12">
 						<div class="btn-menu"></div>
