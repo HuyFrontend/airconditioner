@@ -93,11 +93,21 @@ var Site = (function($, window, undefined) {
       $(this).parent().find('.fb-like').trigger('click');
     });
   };
+  var formatPrice = function (){
+    var priceElement = $('.price-value');
+    for (var i = 0, len = priceElement.length; i < len; i++) {
+      var thisElement = $(priceElement[i])
+      var price = thisElement.text();
+      price = price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+      thisElement.html(price);
+    }
+  };
   return {
     lazyLoadImg: lazyLoadImg,
     hoverThumbnail: hoverThumbnail,
     socialSharing: socialSharing,
-    likeFacebook: likeFacebook
+    likeFacebook: likeFacebook,
+    formatPrice: formatPrice
   };
 
 })(jQuery, window);
@@ -106,5 +116,6 @@ jQuery(function() {
   Site.lazyLoadImg();
   Site.hoverThumbnail();
   Site.socialSharing();
+  Site.formatPrice();
   // Site.likeFacebook();
 });

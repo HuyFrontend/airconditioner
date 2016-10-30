@@ -28,16 +28,16 @@ get_header(); ?>
                 <div class="product-title">
                   <a class="" href="<?php the_permalink();?>"> <?php the_title(); ?> </a>
                 </div>
-                <a>
-                  <?php $product_img_value = get_post_meta( $post->ID, 'product_image', true );
-                    $image_attributes = wp_get_attachment_image_src($product_img_value);
+                <div>
+                  <?php $product_img_value = get_post_meta( $post->ID, 'product_image_1', true );
+                    $image_attributes = wp_get_attachment_image_src($product_img_value, 'large');
                     if ( $image_attributes ) : ?>
-                      <img class="lazy-load" style="display:none;" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
+                      <img class="lazy-load" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
                     <?php endif; ?>
 
-                  <img class="lazy-load" href="<?php the_permalink(); ?>" src=<?php echo get_template_directory_uri() . '/images/coffee-900x556.jpg'; ?> alt="photo-10"/>
-                </a>
-                <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span>đ</span>
+                  <img style="display:none;" class="lazy-load" href="<?php the_permalink(); ?>" src=<?php echo get_template_directory_uri() . '/images/coffee-900x556.jpg'; ?> alt="photo-10"/>
+                </div>
+                <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span> đ</span>
                 </div>
                 <div class="product-status">
                   <?php echo "<strong>Tình trạng:</strong> " .get_post_meta( $post->ID, 'product_status', true );

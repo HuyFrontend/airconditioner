@@ -3274,7 +3274,6 @@ Product section
   position: relative;
 }
 .products img {
-	cursor: pointer;
   margin: 0 auto;
   padding: 10px;
   -webkit-transition:all 1s;
@@ -3286,12 +3285,6 @@ Product section
 .products img:hover {
 	opacity: 0.5;
   filter: alpha(opacity=50);
-	/*-webkit-transform:scale(1.03);
-	-moz-transform:scale(.99);
-	-o-transform:scale(1.03);
-	-ms-transform:scale(1.03);
-	transform:scale(1.03);
-	background:#00ACCF;*/
 }
 .products .product-title {
 	font-size: 20px;
@@ -3338,6 +3331,9 @@ Product section
 .products .product-detail a:hover {
 	color: #FFFFFF;
 	background: #1dcfd1;
+}
+.thumb img {
+	padding: 2px;
 }
 /*--------------------------------------------------------------
 Right menu section
@@ -3430,8 +3426,9 @@ Product
 }
 .product-info .product-price {
 	color: #F00000;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 21px;
+  padding-top: 2px;
 }
 .product-info .thumb {
 	padding-top: 5px;
