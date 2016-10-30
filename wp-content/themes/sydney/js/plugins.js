@@ -8,14 +8,8 @@
 var Site = (function($, window, undefined) {
   'use strict';
 
-  var privateVar = null;
-  var privateMethod = function() {
-    // to do
-    console.log('plugin here!');
-  };
   var lazyLoadImg = function () {
     var lazylement = $('.lazy-load');
-    console.info('load lazy');
     lazylement.lazyload({
       // container: $('.container'),
       effect: 'fadeIn'
@@ -67,7 +61,7 @@ var Site = (function($, window, undefined) {
     };
 
     var shareTwitter = function (content) {
-       window.open('http://twitter.com/share?url=' + content.shareLink
+      window.open('http://twitter.com/share?url=' + content.shareLink
         + '&text=' + content.shareTitle
         + '&hashtags=' + content.hashtags + content.shareTitle
         + '&via=' + content.via, 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
@@ -77,7 +71,7 @@ var Site = (function($, window, undefined) {
       '?url=' + content.shareLink +
       '&media=' + content.shareImage +
       '&description=' + content.shareTitle,
-      'twitterwindow', 'height=550, width=650, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+      'twitterwindow', 'height=550, width=750, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
       return false;
     };
 
@@ -95,16 +89,11 @@ var Site = (function($, window, undefined) {
     });
   };
   var likeFacebook = function () {
-    console.log('go here');
     $('body').off('click.likeFacebook').on('click.likeFacebook', '.facebook-footer', function () {
       $(this).parent().find('.fb-like').trigger('click');
-      // var content = getSharingContent(this);
-      // sharePinterest(content);
     });
   };
   return {
-    publicVar: privateVar,
-    publicMethod: privateMethod,
     lazyLoadImg: lazyLoadImg,
     hoverThumbnail: hoverThumbnail,
     socialSharing: socialSharing,
@@ -114,9 +103,8 @@ var Site = (function($, window, undefined) {
 })(jQuery, window);
 
 jQuery(function() {
-  Site.publicMethod();
   Site.lazyLoadImg();
   Site.hoverThumbnail();
   Site.socialSharing();
-  Site.likeFacebook();
+  // Site.likeFacebook();
 });

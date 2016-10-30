@@ -9,13 +9,18 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<title> Cà phê rang xay mộc, nguyên chất 100%, An nhiên Cafe</title>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:url" content="http://cafeannhien.com/">
-<meta property="og:title" content="Cà phê rang xay An Nhiên">
+<meta property="og:title" content="Cà phê rang xay An Nhiên - Uy tín, ngon, sạch, nguyên chất 100%">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://dn.api1.kage.kakao.co.kr/14/dn/btqaWlTUTtD/Jtsl6FoQWSZG1rb2wAEEy1/o.jpg">
-<meta property="og:description" content="Cung cấp các loại cà phê rang xay mộc, nguyên chất">
+<meta property="og:site_name" content="Cà phê rang xay An Nhiên">
+<meta property="og:image" content="http://cafeannhien.com/wp-content/themes/sydney/images/logo-slogan-281016.png">
+<meta name="keywords" content="Cà phê rang xay An Nhiên - mộc, sạch, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
+<meta name="description" content="Cà phê rang xay An Nhiên - mộc, sạch, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
+<link rel="canonical" href="http://cafeannhien.com/"/>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 

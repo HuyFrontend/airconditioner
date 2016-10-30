@@ -91,13 +91,13 @@ function sydney_posted_on() {
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'sydney' ), __( '1 Comment', 'sydney' ), __( '% Comments', 'sydney' ) );
+		comments_popup_link( __( 'Gửi bình luận', 'sydney' ), __( '1 bình luận', 'sydney' ), __( '% bình luận', 'sydney' ) );
 		echo '</span>';
 	}
 
 	$categories_list = get_the_category_list( __( ', ', 'sydney' ) );
 	if ( $categories_list && sydney_categorized_blog() ) {
-		printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'sydney' ) . '</span>', $categories_list );
+		printf( '<span class="cat-links">' . __( 'Đã viết %1$s', 'sydney' ) . '</span>', $categories_list );
 	}
 }
 endif;
@@ -115,7 +115,7 @@ function sydney_entry_footer() {
 			printf( '<span class="tags-links"><i class="fa fa-tags"></i>' . __( ' %1$s', 'sydney' ) . '</span>', $tags_list );
 		}
 	}
-	edit_post_link( __( 'Edit', 'sydney' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Sửa', 'sydney' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -132,17 +132,17 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'sydney' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Chuyên mục: %s', 'sydney' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
 		$title = sprintf( __( 'Tag: %s', 'sydney' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'sydney' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Tác giả: %s', 'sydney' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'sydney' ), get_the_date( _x( 'Y', 'yearly archives date format', 'sydney' ) ) );
+		$title = sprintf( __( 'Năm: %s', 'sydney' ), get_the_date( _x( 'Y', 'yearly archives date format', 'sydney' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'sydney' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'sydney' ) ) );
+		$title = sprintf( __( 'Tháng: %s', 'sydney' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'sydney' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'sydney' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'sydney' ) ) );
+		$title = sprintf( __( 'Ngày: %s', 'sydney' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'sydney' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
 			$title = _x( 'Asides', 'post format archive title', 'sydney' );

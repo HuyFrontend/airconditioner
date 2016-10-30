@@ -2186,7 +2186,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		            '<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
 	);
 
-	$required_text = sprintf( ' ' . __('Những ô bắt buộc được đánh dấu %s'), '<span class="required">*</span>' );
+	$required_text = sprintf( ' ' . __('Những ô đánh dấu %s là bắt buộc'), '<span class="required">*</span>' );
 
 	/**
 	 * Filters the default comment form fields.
@@ -2198,11 +2198,11 @@ function comment_form( $args = array(), $post_id = null ) {
 	$fields = apply_filters( 'comment_form_default_fields', $fields );
 	$defaults = array(
 		'fields'               => $fields,
-		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Bình luận', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Nội dung', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 		/** This filter is documented in wp-includes/link-template.php */
 		'must_log_in'          => '<p class="must-log-in">' . sprintf(
 		                              /* translators: %s: login URL */
-		                              __( 'Cần phải <a href="%s">Đăng nhập</a> để gởi bình luận.' ),
+		                              __( 'Bạn cần phải <a href="%s">Đăng nhập</a> để gởi bình luận.' ),
 		                              wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
 		                          ) . '</p>',
 		/** This filter is documented in wp-includes/link-template.php */
@@ -2229,8 +2229,8 @@ function comment_form( $args = array(), $post_id = null ) {
 		'title_reply_after'    => '</h3>',
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
-		'cancel_reply_link'    => __( 'Cancel' ),
-		'label_submit'         => __( 'Post' ),
+		'cancel_reply_link'    => __( 'Hủy' ),
+		'label_submit'         => __( 'Gửi' ),
 		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
 		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 		'format'               => 'xhtml',

@@ -3518,3 +3518,16 @@ Comment
 .comment-form-url {
 	display: none!important;
 }
+/*--------------------------------------------------------------
+Contact
+--------------------------------------------------------------*/
+.contact-group .contact-title {
+	font-weight: bold;
+}
+.contact-group .contact-web a {
+	color: #767676;
+}
+.contact-group .contact-infomation {
+	list-style-type: none;
+}
+
