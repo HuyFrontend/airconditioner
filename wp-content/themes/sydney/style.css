@@ -3273,16 +3273,17 @@ Product section
   padding: 15px;
   position: relative;
 }
-.products img {
+.products .product-image img {
+	/*display: block;*/
   margin: 0 auto;
   padding: 10px;
-  -webkit-transition:all 1s;
-	-moz-transition:all 1s;
-	-o-transition:all 1s;
-	-ms-transition:all 1s;
-	transition:all 1s;
+  -webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	-ms-transition: opacity 1s;
+	transition: opacity 1s;
 }
-.products img:hover {
+.products .product-image img:hover {
 	opacity: 0.5;
   filter: alpha(opacity=50);
 }

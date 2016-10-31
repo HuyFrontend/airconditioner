@@ -28,14 +28,12 @@ get_header(); ?>
                 <div class="product-title">
                   <a class="" href="<?php the_permalink();?>"> <?php the_title(); ?> </a>
                 </div>
-                <div>
+                <div class="product-image">
                   <?php $product_img_value = get_post_meta( $post->ID, 'product_image_1', true );
                     $image_attributes = wp_get_attachment_image_src($product_img_value, 'large');
                     if ( $image_attributes ) : ?>
                       <img class="lazy-load" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
                     <?php endif; ?>
-
-                  <img style="display:none;" class="lazy-load" href="<?php the_permalink(); ?>" src=<?php echo get_template_directory_uri() . '/images/coffee-900x556.jpg'; ?> alt="photo-10"/>
                 </div>
                 <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span> đ</span>
                 </div>
