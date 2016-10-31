@@ -18,7 +18,7 @@ var Site = (function($, window, undefined) {
   var hoverThumbnail = function () {
     var thumbImgs = $('[data-hover-image]'),
         thumbImg = thumbImgs.find('img'),
-        mainImg = thumbImgs.parent().find('.large-view img');
+        mainImg = thumbImgs.parent().find('.large-view img.large-img');
     thumbImg.off('click.changeImg').on('click.changeImg', function () {
       var newSource = $(this).attr('data-src');
       mainImg.attr('src', newSource);
@@ -42,9 +42,9 @@ var Site = (function($, window, undefined) {
         shareTitle: title.text(),
         shareImage: image.attr('src'),
         shareCaption: '',
-        shareDescription: 'an nhiên trong từng cà phê giọt',
-        hashtags: 'CafeAnNhien, CafeRangXay, CafeNguyenChat',
-        via: 'CafeAnNhien'
+        shareDescription: 'An nhiên trong từng cà phê giọt',
+        hashtags: 'CaPheNguyenChat, CaPheRangXayNguyenChat, CaPheAnNhien, CafeAnNhien.Com',
+        via: 'CafeAnNhien.Com'
       };
       return content;
     };
@@ -54,7 +54,7 @@ var Site = (function($, window, undefined) {
         display: 'popup',
         href: content.shareLink,
         caption: content.shareTitle,
-        description: content.shareDescription,
+        description: content.shareDescription + ' - ' + content.hashtags,
         picture: content.shareImage
       };
       FB.ui(options, function(response){});
@@ -63,14 +63,14 @@ var Site = (function($, window, undefined) {
     var shareTwitter = function (content) {
       window.open('http://twitter.com/share?url=' + content.shareLink
         + '&text=' + content.shareTitle
-        + '&hashtags=' + content.hashtags + content.shareTitle
+        + '&hashtags=' + content.hashtags
         + '&via=' + content.via, 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
     };
     var sharePinterest = function (content) {
       window.open(content.linkPinterest +
       '?url=' + content.shareLink +
       '&media=' + content.shareImage +
-      '&description=' + content.shareTitle,
+      '&description=' + content.shareTitle + ' - ' + content.hashtags,
       'twitterwindow', 'height=550, width=750, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
       return false;
     };

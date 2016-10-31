@@ -21,7 +21,7 @@ get_header(); ?>
       <div class="posts-layout">
         <section>
           <h3 class="block-title">Các loại cà phê</h3>
-            <div  class="products">
+            <div  class="products lazy-load">
 
             <?php while ($wp_query->have_posts()) : $wp_query->the_post(); $count++; ?>
               <div class="product-item" id="product-<?php the_ID(); ?>">

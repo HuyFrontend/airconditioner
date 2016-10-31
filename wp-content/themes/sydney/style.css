@@ -3436,6 +3436,18 @@ Product
 .product-info .thumb img {
 	cursor: pointer;
 }
+.product-info .product-image .large-view {
+	position: relative;
+}
+.product-info .product-image .caption {
+	position: absolute;
+  top: 60%;
+  right: 5%;
+}
+.product-info .product-image .caption img {
+	width: 100px;
+	height: auto;
+}
 .product-price, .product-status, .product-description {
   margin: 5px 0;
 }

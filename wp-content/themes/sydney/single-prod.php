@@ -28,7 +28,10 @@ get_header(); ?>
             $image_thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
             if ( $image_attributes ) : ?>
                 <div class="large-view">
-                  <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" data-share-img/>
+                  <img class="large-img lazy-load" src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" data-share-img/>
+                  <div class="caption">
+                    <img class="caption-img lazy-load" src=<?php echo get_template_directory_uri() .'/images/logo-281016.png';?> alt="caption"/>
+                  </div>
                 </div>
             <?php endif; ?>
             <!-- Thumb image -->

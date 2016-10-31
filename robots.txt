@@ -1,5 +1,5 @@
-User-agent: *
+User-agent: Googlelebot
 Disallow: /cgi-bin/
 Disallow: /wp-admin/
 Disallow: /wp-includes/
-Sitemap: http://cafeannhien.com
+Sitemap: http://www.cafeannhien.com
