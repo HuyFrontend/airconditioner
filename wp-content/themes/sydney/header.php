@@ -18,9 +18,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cà phê rang xay An Nhiên">
 <meta property="og:image" content="http://cafeannhien.com/wp-content/themes/sydney/images/logo-slogan-281016.png">
-<meta name="keywords" content="Cà phê rang xay An Nhiên - mộc, sạch, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
-<meta name="description" content="Cà phê rang xay An Nhiên - mộc, sạch, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
-<meta name="robots" content="index,follow" />
+<meta name="keywords" content="Cà phê rang xay An Nhiên - Cà phê sạch, rang mộc, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
+<meta name="description" content="Cà phê rang xay An Nhiên - Cà phê sạch, rang mộc, nguyên chất 100%. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
+<meta name="p:domain_verify" content="7b2d2bfc6cfd0b40e56039dfa81083d4"/>
+<meta name="google-site-verification" content="-XEAo6JpfMZUIKc3TaB1mMEM7l6v-Ghbib8pP7K-8lk"/>
+
 <link rel="canonical" href="http://cafeannhien.com/"/>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
