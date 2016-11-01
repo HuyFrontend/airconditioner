@@ -3167,8 +3167,7 @@ Panels
 			padding-top: 20px;
 			padding-bottom: 20px;
 		}
-
-        .text-slider-section {
+    .text-slider-section {
 			min-height: 0;
 			top: auto;
 			bottom: 0;
@@ -3213,6 +3212,9 @@ Panels
 		}
 		.share-tablet, .share-desktop {
     	display: none!important;
+  	}
+  	.product-image .caption {
+  		display: none!important;
   	}
 	}
 	@media only screen and (max-width: 320px) {
