@@ -7,13 +7,14 @@
  * @since Sydney 1.0
  */
 
-get_header(); ?>
+get_header();
+include('languages/vi.lng.php');
+?>
 
   <div id="primary" class="content-area col-md-9 <?php echo sydney_blog_layout(); ?>">
-    <main id="main" class="post-wrap" role="main">
+    <main id="main" class="post-wrap">
 
-
-      <?php  $temp = $wp_query;
+      <?php $temp = $wp_query;
         $wp_query = null;
         $wp_query = new WP_Query();
         $wp_query->query('showposts=6&post_type=prod'.'&paged='.$paged);
@@ -35,21 +36,22 @@ get_header(); ?>
                       <img class="lazy-load" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
                     <?php endif; ?>
                 </div>
-                <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span> đ</span>
+                <div class="product-price"><span><?php echo $l10n['product']['price'] .': ';?><span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span>đ</span>
                 </div>
                 <div class="product-status">
-                  <?php echo "<strong>Tình trạng:</strong> " .get_post_meta( $post->ID, 'product_status', true );
-                  ?>
+                  <span class="bold"><?php echo $l10n['product']['status'] .': '; ?></span>
+                  <span> <?php echo get_post_meta( $post->ID, 'product_status', true ); ?> </span>
                 </div>
-                <div class="product-description"><p><?php echo "<strong>Đặc trưng:</strong> " .get_post_meta( $post->ID, 'product_description', true ); ?></p>
+                <div class="product-description"><p><?php echo $l10n['product']['description'] .': ' .get_post_meta( $post->ID, 'product_description', true ); ?></p>
                 </div>
-                <div class="product-detail"><a data-type="modal" href="<?php the_permalink();?>">Chi tiết</a>
+                <div class="product-detail">
+                  <a data-type="modal" href="<?php the_permalink();?>"><?php echo $l10n['btn']['detail']; ?></a>
                 </div>
               </div>
             <?php endwhile; ?>
           </div>
         </section>
-        <nav>
+        <nav class="navigation-link">
             <?php previous_posts_link('&laquo; Mới hơn') ?>
             <?php next_posts_link('Cũ hơn &raquo;') ?>
         </nav>
