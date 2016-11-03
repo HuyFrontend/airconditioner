@@ -17,10 +17,9 @@ var Site = (function($, window, undefined) {
   };
   var hoverThumbnail = function () {
     var thumbImgs = $('[data-hover-image]'),
-        thumbImg = thumbImgs.find('img'),
         mainImg = thumbImgs.parent().find('.large-view img.large-img');
-    thumbImg.off('click.changeImg').on('click.changeImg', function () {
-      var newSource = $(this).attr('data-src');
+    thumbImgs.off('click.changeImg', '.thumb-view').on('click.changeImg', '.thumb-view', function () {
+      var newSource = $(this).find('img').attr('data-src');
       mainImg.attr('src', newSource);
     });
   };
@@ -89,7 +88,7 @@ var Site = (function($, window, undefined) {
     });
   };
   var likeFacebook = function () {
-    $('body').off('click.likeFacebook').on('click.likeFacebook', '.facebook-footer', function () {
+    body.off('click.likeFacebook').on('click.likeFacebook', '.facebook-footer', function () {
       $(this).parent().find('.fb-like').trigger('click');
     });
   };
@@ -102,20 +101,46 @@ var Site = (function($, window, undefined) {
       thisElement.html(price);
     }
   };
+  var test = function () {
+    var items = $('.product-item');
+    for (var i = 0, len = items.length; i < len; i++) {
+      console.log('item height ' + i + ': ', $(items[i]).height());
+    }
+  };
+  var initSlick = function () {
+    var slickContainer = $('[data-slick]');
+    slickContainer.slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      // dots: true,
+      centerMode: true,
+      responsive: [{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }]
+    });
+  };
   return {
+    test: test,
     lazyLoadImg: lazyLoadImg,
     hoverThumbnail: hoverThumbnail,
     socialSharing: socialSharing,
     likeFacebook: likeFacebook,
-    formatPrice: formatPrice
+    formatPrice: formatPrice,
+    initSlick: initSlick
   };
 
 })(jQuery, window);
 
 jQuery(function() {
+  Site.test();
   Site.lazyLoadImg();
   Site.hoverThumbnail();
   Site.socialSharing();
   Site.formatPrice();
   // Site.likeFacebook();
+  Site.initSlick();
 });

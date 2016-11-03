@@ -20,6 +20,8 @@ $l10n = array(
     'detail' => 'Chi tiết',
     'older' => 'Cũ hơn',
     'newer' => 'Mới hơn'
-  )
+  ),
+  'site-name' => 'Uh Thi An Nhien',
+  'copyright' => 'Copyright @ 2016'
 );
 ?>

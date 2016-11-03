@@ -17,7 +17,7 @@ get_header(); ?>
     <main id="main" class="post-wrap product-iii" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
-        <div class="product-info" data-share-content>
+        <div class="product-info product-detail" data-share-content>
           <div class="product-title">
             <h1 data-share-title><?php the_title(); ?></h1>
           </div>
@@ -27,7 +27,7 @@ get_header(); ?>
             $image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
             $image_thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
             if ( $image_attributes ) : ?>
-                <div class="large-view">
+                <div class="large-image large-view">
                   <img class="large-img lazy-load" src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" data-share-img/>
                   <div class="caption">
                     <img class="caption-img lazy-load" src=<?php echo get_template_directory_uri() .'/images/logo-281016.png';?> alt="caption"/>
@@ -35,28 +35,30 @@ get_header(); ?>
                 </div>
             <?php endif; ?>
             <!-- Thumb image -->
-            <div class="thumb" data-hover-image="true">
+            <div class="thumb-block" data-hover-image="true" data-slick="true">
               <?php
-              for($i = 1; $i <= 5; $i++) {
-                $field_name = "product_image_" .$i;
-                $this_img = get_post_meta( $post->ID, $field_name, true );
-                $this_img_thumb = wp_get_attachment_image_src($this_img, 'thumbnail');
-                $this_img_large = wp_get_attachment_image_src($this_img, 'large');
-                if($this_img_thumb) {
-                  $this_img_source = $this_img_thumb[0];
-                  $this_data_source = $this_img_large[0];
-                  echo "<img src=$this_img_source width=70 data-src=$this_data_source>";
+                for($i = 1; $i <= 5; $i++) {
+                  $field_name = "product_image_" .$i;
+                  $this_img = get_post_meta( $post->ID, $field_name, true );
+                  $this_img_thumb = wp_get_attachment_image_src($this_img, 'thumbnail');
+                  $this_img_large = wp_get_attachment_image_src($this_img, 'large');
+                  if($this_img_thumb) {
+                    $this_img_source = $this_img_thumb[0];
+                    $this_data_source = $this_img_large[0];
+                    echo '<div class="thumb-image thumb-view">' ."<img src=$this_img_source width=70 data-src=$this_data_source>" . '</div>';
+                  }
                 }
-              }
               ?>
             </div>
           </div>
 
 
           <div class="product-price">
+            <?php $this_price = get_post_meta( $post->ID, 'product_price', true );
+            ?>
             <span>Giá:
-              <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?>
-              </span> đ
+              <span class="price-value"><?php echo trim($this_price) .'đ'; ?>
+              </span>
             </span>
           </div>
           <div class="product-status">

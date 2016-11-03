@@ -22,7 +22,7 @@ include('languages/vi.lng.php');
       <div class="posts-layout">
         <section>
           <h3 class="block-title">Các loại cà phê</h3>
-            <div  class="products lazy-load">
+            <div  class="products product-list lazy-load">
 
             <?php while ($wp_query->have_posts()) : $wp_query->the_post(); $count++; ?>
               <div class="product-item" id="product-<?php the_ID(); ?>">
@@ -46,7 +46,7 @@ include('languages/vi.lng.php');
                 </div>
                 <div class="product-description"><p><?php echo $l10n['product']['description'] .': ' .get_post_meta( $post->ID, 'product_description', true ); ?></p>
                 </div>
-                <div class="product-detail">
+                <div class="btn detail-link">
                   <a data-type="modal" href="<?php the_permalink();?>"><?php echo $l10n['btn']['detail']; ?></a>
                 </div>
               </div>

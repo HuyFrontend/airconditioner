@@ -35,7 +35,7 @@
   <div class="row">
 		<div class="col-md-12">
 			<div class="footer-copyright">
-				<p>Copyright @ 2016 - <a href="http://www.facebook.com/CafeAnNhien" class="web-author" target="_blank">UH THI AN NHIEN</a>. Designed by, huyvoxuan.
+				<p>Copyright @ 2016 - <a href="http://www.facebook.com/CafeAnNhien" class="web-author" target="_blank">UH THI AN NHIEN</a>.
 				</p>
 			</div>
 		</div>

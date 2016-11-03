@@ -45,6 +45,8 @@
  ></script>
  <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/libraries/widgets.js';?>
  ></script>
+ <script type="text/javascript" src=<?php echo get_template_directory_uri() . '/js/libraries/slick.js';?>
+ ></script>
  <!-- FACEBOOK -->
 <script type="text/javascript">
 	window.fbAsyncInit = function() {

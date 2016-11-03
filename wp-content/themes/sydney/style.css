@@ -3175,7 +3175,7 @@ Panels
 		.site-title {
 			font-size: 22px !important;
 		}
-		.products .product-item {
+		.product-list .product-item {
 			width: 100%;
 		}
 		.share-tablet {
@@ -3207,13 +3207,13 @@ Panels
 		.text-slider {
 			margin-bottom: 15px;
 		}
-		.products .product-item {
+		.product-list .product-item {
 			width: 100%;
 		}
 		.share-tablet, .share-desktop {
     	display: none!important;
   	}
-  	.product-info .product-image .caption {
+  	.product-detail .product-image .caption {
   		display: none!important;
   	}
 	}
@@ -3223,7 +3223,7 @@ Panels
 		}
 	}
 	@media only screen and (min-width: 768px) {
-		.products .product-item {
+		.product-list .product-item {
 			width: 50%;
 		}
 		.post .entry-content img{
@@ -3263,10 +3263,10 @@ Header section
 /*--------------------------------------------------------------
 Product section
 --------------------------------------------------------------*/
-.products {
+.product-list {
 	display: inline-block;
 }
-.products .product-item {
+.product-list .product-item {
 	background: url('images/fbcback.png') repeat scroll 0 0 #CCCCCC;
   border: 2px solid #FFFFFF;
   display: inline;
@@ -3275,10 +3275,10 @@ Product section
   padding: 15px;
   position: relative;
 }
-.products .product-image a {
+.product-list .product-image a {
 	display: block;
 }
-.products .product-image img {
+.product-list .product-image img {
 	/*display: block;*/
   margin: 0 auto;
   padding: 10px;
@@ -3288,11 +3288,11 @@ Product section
 	-ms-transition: opacity 1s;
 	transition: opacity 1s;
 }
-.products .product-image img:hover {
+.product-list .product-image img:hover {
 	opacity: 0.5;
   filter: alpha(opacity=50);
 }
-.products .product-title {
+.product-list .product-title {
 	font-size: 20px;
 	font-family: Arial,Helvetica,sans-serif;
 	padding-left: 10px;
@@ -3300,30 +3300,30 @@ Product section
   color: rgba(63, 14, 14, 0.61);
   font-weight: bold;
 }
-.products .product-title span {
+.product-list .product-title span {
 	color: #00ACCF;
 }
-.products .product-description {
+.product-list .product-description {
 	line-height: 1.5em;
   height: 3em;       /* height is 2x line-height, so two lines will display */
   overflow: hidden;
 }
-.products .product-price {
+.product-list .product-price {
 	color: #F00000;
   font-weight: 600;
   font-size: 25px;
   padding: 10px 0 10px 10px;
 }
-.products .product-description,
-.products .product-status {
+.product-list .product-description,
+.product-list .product-status {
 	font-size: 16px;
 	padding-left: 10px;
 }
-.products .product-detail {
+.product-list .detail-link {
 	float: right;
 	padding-right: 20px;
 }
-.products .product-detail a {
+.product-list .detail-link a {
 	color: #00F;
 	font-size: 16px;
 	cursor: pointer;
@@ -3334,12 +3334,9 @@ Product section
   color: #333;
   padding: 6px 20px;
 }
-.products .product-detail a:hover {
+.product-list .detail-link a:hover {
 	color: #FFFFFF;
 	background: #1dcfd1;
-}
-.thumb img {
-	padding: 2px;
 }
 /*--------------------------------------------------------------
 Right menu section
@@ -3414,45 +3411,47 @@ Footer section
 /*--------------------------------------------------------------
 Product
 --------------------------------------------------------------*/
-.product-info .product-thumb {
-  width: 100%;
-}
-.product-info .product-thumb img {
-	/*width: 480px;
-	height: 280px;*/
-}
-.product-info .product-title {
+.product-detail .product-title {
 	padding-top: 10px;
 }
-.product-info .product-title h1 {
+.product-detail .product-title h1 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
   color: #00ACCF;
 }
-.product-info .product-price {
+.product-detail .product-price {
 	color: #F00000;
   font-weight: bold;
   font-size: 21px;
   padding-top: 2px;
 }
-.product-info .thumb {
-	padding-top: 5px;
+.product-detail .product-image {
+	text-align: center;
 }
-.product-info .thumb img {
-	cursor: pointer;
-}
-.product-info .product-image .large-view {
+.product-detail .product-image .large-image {
 	position: relative;
 }
-.product-info .product-image .caption {
+.product-detail .product-image .caption {
 	position: absolute;
   top: 60%;
   right: 5%;
 }
-.product-info .product-image .caption img {
+.product-detail .product-image .caption img {
 	width: 100px;
 	height: auto;
+}
+.product-detail .product-image .thumb-block {
+	padding-top: 5px;
+	display: inline-block;
+}
+.product-detail .product-image .thumb-block .thumb-image {
+	float: left;
+	padding: 2px;
+}
+.product-detail .product-image .thumb-block .thumb-image img {
+	width: 70px;
+	height: 70px;
 }
 .product-price, .product-status, .product-description {
   margin: 5px 0;
