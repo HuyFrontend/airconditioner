@@ -8,22 +8,32 @@
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+<?php
+// Include LanguageHelper class
+  include 'LanguageHelper.php';
+  // Gọi hàm checkLang để xem user chọn ngôn ngữ nào
+  $object = new LanguageHelper();
+  $lang = $object->checkLang();
+  // include file ngôn ngữ đó vào page
+  include($lang);
+?>
 <head>
-<title> Cafe An Nhiên! - Cà phê rang xay nguyên chất 100%.</title>
+<title> <?php echo $l10n['site-title']; ?></title>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta property="og:url" content="http://www.cafeannhien.com"/>
-<meta property="og:title" content="Cà phê rang xay An Nhiên - Cà phê nguyên chất 100%. Không phụ gia và hương liệu tạo mùi."/>
 <meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Cà phê rang xay An Nhiên"/>
-<meta property="og:image" content="http://www.cafeannhien.com/wp-content/themes/sydney/images/logo-slogan-281016.png"/>
-<meta name="keywords" content="Cà phê nguyên chất, Cà phê rang xay An Nhiên.Không phụ gia, không hương liệu tạo mùi. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng"/>
-<meta name="description" content="Cà phê nguyên chất, rang xay mộc, không phụ gia, không hương liệu tạo mùi."/>
+<meta property="og:url" content="<?php echo $l10n['url']; ?>"/>
+<meta property="og:site_name" content="<?php echo $l10n['meta']['site-name'];?>" />
+<meta property="og:title" content="<?php echo $l10n['meta']['title'];?>" />
+<meta property="og:image" content="<?php echo $l10n['meta']['image'];?>" />
+<meta name="keywords" content="<?php echo $l10n['meta']['keywords'];?>" />
+<meta name="description" content="<?php echo $l10n['meta']['description'];?>" />
+
 <meta name="p:domain_verify" content="7b2d2bfc6cfd0b40e56039dfa81083d4"/>
 <meta name="google-site-verification" content="-XEAo6JpfMZUIKc3TaB1mMEM7l6v-Ghbib8pP7K-8lk"/>
 
-<link rel="canonical" href="http://www.cafeannhien.com/"/>
+<link rel="canonical" href="<?php echo $l10n['url']; ?>"/>
 <link rel="profile" href="http://gmpg.org/xfn/11"/>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 
@@ -72,7 +82,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-lang="<?php echo $lang; ?>">
 <div class="preloader">
     <div class="spinner">
         <div class="pre-bounce1"></div>
