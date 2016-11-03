@@ -32,7 +32,9 @@ get_header(); ?>
                   <?php $product_img_value = get_post_meta( $post->ID, 'product_image_1', true );
                     $image_attributes = wp_get_attachment_image_src($product_img_value, 'large');
                     if ( $image_attributes ) : ?>
-                      <img class="lazy-load" href="<?php the_permalink(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
+                      <a href="<?php the_permalink(); ?>">
+                        <img class="lazy-load" src="<?php echo $image_attributes[0]; ?>" alt="ca phe nguyen chat An Nhien"/>
+                      </a>
                     <?php endif; ?>
                 </div>
                 <div class="product-price"><span>Giá: <span class="price-value"><?php echo get_post_meta( $post->ID, 'product_price', true ); ?></span> đ</span>

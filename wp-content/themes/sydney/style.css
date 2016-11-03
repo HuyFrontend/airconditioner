@@ -3213,7 +3213,7 @@ Panels
 		.share-tablet, .share-desktop {
     	display: none!important;
   	}
-  	.product-image .caption {
+  	.product-info .product-image .caption {
   		display: none!important;
   	}
 	}
@@ -3274,6 +3274,9 @@ Product section
   overflow: hidden;
   padding: 15px;
   position: relative;
+}
+.products .product-image a {
+	display: block;
 }
 .products .product-image img {
 	/*display: block;*/

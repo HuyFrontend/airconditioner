@@ -11,21 +11,21 @@
 <head>
 <title> Cafe An Nhiên! - Cà phê rang xay nguyên chất 100%.</title>
 
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:url" content="http://cafeannhien.com/">
-<meta property="og:title" content="Cà phê rang xay An Nhiên - Uy tín, ngon, sạch, nguyên chất 100%">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Cà phê rang xay An Nhiên">
-<meta property="og:image" content="http://cafeannhien.com/wp-content/themes/sydney/images/logo-slogan-281016.png">
-<meta name="keywords" content="Cà phê nguyên chất, Cà phê rang xay An Nhiên - rang mộc, sạch, nguyên chất 100%. Không phụ gia, không hương liệu tạo mùi. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng">
-<meta name="description" content="Cà phê nguyên chất, rang xay mộc, không phụ gia, không hương liệu tạo mùi.">
+<meta charset="<?php bloginfo( 'charset' ); ?>"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="og:url" content="http://www.cafeannhien.com"/>
+<meta property="og:title" content="Cà phê rang xay An Nhiên - Cà phê nguyên chất 100%. Không phụ gia và hương liệu tạo mùi."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Cà phê rang xay An Nhiên"/>
+<meta property="og:image" content="http://www.cafeannhien.com/wp-content/themes/sydney/images/logo-slogan-281016.png"/>
+<meta name="keywords" content="Cà phê nguyên chất, Cà phê rang xay An Nhiên.Không phụ gia, không hương liệu tạo mùi. Thương hiệu nổi tiếng uy tín số 1 VN. Vì sức khỏe cộng đồng"/>
+<meta name="description" content="Cà phê nguyên chất, rang xay mộc, không phụ gia, không hương liệu tạo mùi."/>
 <meta name="p:domain_verify" content="7b2d2bfc6cfd0b40e56039dfa81083d4"/>
 <meta name="google-site-verification" content="-XEAo6JpfMZUIKc3TaB1mMEM7l6v-Ghbib8pP7K-8lk"/>
 
-<link rel="canonical" href="http://cafeannhien.com/"/>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="canonical" href="http://www.cafeannhien.com/"/>
+<link rel="profile" href="http://gmpg.org/xfn/11"/>
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 
 <link rel="shortcut icon" type="image/png" href=<?php echo get_template_directory_uri() . '/images/favicon.png';?> />
 <?php wp_head(); ?>
